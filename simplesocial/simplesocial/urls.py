@@ -20,4 +20,6 @@ from . import views
 urlpatterns = [
     path('', views.HomePage.as_view(), name='home'),
     path('admin/', admin.site.urls),
+    path('accounts/', include('accounts.urls',namespace='accounts')), #allows to use urls.py that is inside the 'accounts' app
+    path('accounts/', include('django.contrib.auth.urls')), # Allows to connect with built in tools of django por authentication
 ]
