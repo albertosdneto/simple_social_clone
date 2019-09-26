@@ -1,7 +1,7 @@
 """simplesocial URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
-    https://docs.djangoproject.com/en/2.2/topics/http/urls/
+    https://docs.djangoproject.com/en/2.0/topics/http/urls/
 Examples:
 Function views
     1. Add an import:  from my_app import views
@@ -18,10 +18,12 @@ from django.urls import path, include
 from . import views
 
 urlpatterns = [
-    path('', views.HomePage.as_view(), name='home'),
+    path('', views.HomePage.as_view(), name="home"),
     path('admin/', admin.site.urls),
-    path('accounts/', include('accounts.urls',namespace='accounts')), #allows to use urls.py that is inside the 'accounts' app
-    path('accounts/', include('django.contrib.auth.urls')), # Allows to connect with built in tools of django por authentication
-    path('test/',views.TestePage.as_view(),name='test'),
-    path('thanks/', views.ThanksPage.as_view(), name='thanks'),
+    path('test/', views.TestPage.as_view(), name="test"),
+    path('thanks/', views.ThanksPage.as_view(), name="thanks"),
+    path('accounts/', include("accounts.urls", namespace="accounts")),
+    path('accounts/', include("django.contrib.auth.urls")),
+    path('posts/', include("posts.urls", namespace="posts")),
+    path('groups/',include("groups.urls", namespace="groups")),
 ]
