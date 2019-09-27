@@ -30,7 +30,7 @@
 ## Description
 This project is part of the Udemy course "Python and Django Full Stack Web Developer Bootcamp".
 
-In this exercise a simple social network is built with what was learned along the course.
+In this exercise a simple social media is built with what was learned along the course.
 
 ## Link to Course
  - https://www.udemy.com/course/python-and-django-full-stack-web-developer-bootcamp/ 
